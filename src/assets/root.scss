@@ -1,0 +1,185 @@
+@use "./variables";
+
+
+
+
+
+
+
+// Home Page Style
+
+.content-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-section {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.logo-circle {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #1e9bcf 0%, #0d7ba8 100%);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(30, 155, 207, 0.3);
+}
+
+.logo-icon {
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+}
+
+.app-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.app-subtitle {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin: 0;
+  font-weight: 400;
+}
+
+.login-segment {
+  margin: 0 0 30px 0;
+  background: white;
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  
+  
+  .segment-button-checked {
+      background-color: #80808038;
+      border-radius: 8px;
+    border-bottom: unset;
+  }
+}
+
+ion-segment-button {
+  --indicator-color: transparent;
+  --color: #7f8c8d;
+  --color-checked: #2c3e50;
+  font-weight: 500;
+  min-height: 44px;
+  text-transform: none;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+.form-section {
+  margin-bottom: 30px;
+}
+
+.input-item {
+  --background: #ecf0f1;
+  --border-radius: 12px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --inner-padding-end: 0;
+  margin-bottom: 16px;
+  border-radius: 12px;
+}
+
+.custom-input {
+  --padding-start: 0;
+  --padding-end: 0;
+  font-size: 15px;
+  --placeholder-color: #95a5a6;
+  --placeholder-opacity: 1;
+  min-height: 52px;
+}
+
+.forgot-password-wrapper {
+  text-align: right;
+  margin: 8px 0 24px 0;
+}
+
+.forgot-link {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #1e9bcf;
+}
+
+.login-button {
+  --background: linear-gradient(135deg, #1e9bcf 0%, #0d7ba8 100%);
+  --background-activated: #0d7ba8;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 12px rgba(30, 155, 207, 0.3);
+  height: 52px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.signup-wrapper {
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-link {
+  font-weight: 600;
+  cursor: pointer;
+  color: #1e9bcf;
+  margin-left: 4px;
+}
+
+.illustration-section {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.doctor-image {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+// Responsive design
+@media (max-height: 700px) {
+  .header-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .logo-circle {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .logo-icon {
+    font-size: 30px;
+  }
+
+  .app-title {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 20px 40px;
+  }
+}
