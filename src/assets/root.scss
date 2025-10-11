@@ -9,11 +9,12 @@
 // Home Page Style
 
 .content-wrapper {
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
 
 .header-section {
@@ -56,52 +57,53 @@
 }
 
 .login-segment {
-  margin: 0 0 30px 0;
+  display: flex;
+  margin-bottom: 30px;
   background: white;
   border-radius: 12px;
-  padding: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  
-  
-  .segment-button-checked {
+  overflow: hidden;
+
+  button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    color: #7f8c8d;
+    transition: all 0.2s;
+
+    &.active {
       background-color: #80808038;
-      border-radius: 8px;
-    border-bottom: unset;
+      color: #2c3e50;
+    }
   }
 }
 
-ion-segment-button {
-  --indicator-color: transparent;
-  --color: #7f8c8d;
-  --color-checked: #2c3e50;
-  font-weight: 500;
-  min-height: 44px;
-  text-transform: none;
-  font-size: 15px;
-  letter-spacing: 0;
-}
 .form-section {
   margin-bottom: 30px;
 }
 
 .input-item {
-  --background: #ecf0f1;
-  --border-radius: 12px;
-  --padding-start: 20px;
-  --padding-end: 20px;
-  --inner-padding-end: 0;
   margin-bottom: 16px;
-  border-radius: 12px;
-}
 
-.custom-input {
-  --padding-start: 0;
-  --padding-end: 0;
-  font-size: 15px;
-  --placeholder-color: #95a5a6;
-  --placeholder-opacity: 1;
-  min-height: 52px;
+  input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: none;
+    background: #ecf0f1;
+    font-size: 15px;
+    color: #2c3e50;
+    outline: none;
+
+    &::placeholder {
+      color: #95a5a6;
+      opacity: 1;
+    }
+  }
 }
 
 .forgot-password-wrapper {
@@ -117,29 +119,31 @@ ion-segment-button {
 }
 
 .login-button {
-  --background: linear-gradient(135deg, #1e9bcf 0%, #0d7ba8 100%);
-  --background-activated: #0d7ba8;
-  --border-radius: 12px;
-  --box-shadow: 0 4px 12px rgba(30, 155, 207, 0.3);
+  width: 100%;
   height: 52px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e9bcf 0%, #0d7ba8 100%);
+  box-shadow: 0 4px 12px rgba(30, 155, 207, 0.3);
   font-size: 16px;
   font-weight: 600;
+  color: #fff;
+  cursor: pointer;
   text-transform: none;
   letter-spacing: 0.3px;
-  margin-top: 0;
   margin-bottom: 20px;
 }
 
 .signup-wrapper {
   text-align: center;
   font-size: 14px;
-}
 
-.signup-link {
-  font-weight: 600;
-  cursor: pointer;
-  color: #1e9bcf;
-  margin-left: 4px;
+  .signup-link {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1e9bcf;
+    margin-left: 4px;
+  }
 }
 
 .illustration-section {
@@ -148,15 +152,15 @@ ion-segment-button {
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 20px;
+
+  img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+  }
 }
 
-.doctor-image {
-  max-width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-}
-
-// Responsive design
+/* Responsive design */
 @media (max-height: 700px) {
   .header-section {
     margin-top: 20px;
@@ -183,3 +187,4 @@ ion-segment-button {
     padding: 20px 40px;
   }
 }
+

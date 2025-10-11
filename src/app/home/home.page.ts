@@ -4,11 +4,12 @@ import { CommonService } from '../services/common';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: 'home.component.html',
+  styleUrls: ['home.component.scss'],
+  standalone: true,
   imports: [SharedModule],
 })
-export class HomePage {
+export class HomeComponent {
   constructor(private commonService: CommonService) {}
 
   loginType: string = 'patient';

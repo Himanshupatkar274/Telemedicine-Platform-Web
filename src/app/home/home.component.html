@@ -1,0 +1,61 @@
+<div class="content-wrapper">
+  <!-- Logo and Header -->
+  <div class="header-section">
+    <div class="logo-circle">
+      <span class="logo-icon">💊</span>
+    </div>
+    <h1 class="app-title">Acko Telemedicine</h1>
+    <p class="app-subtitle">Your Health, Our Priority</p>
+  </div>
+
+  <!-- Login Type Toggle -->
+  <div class="login-segment">
+    <button 
+      [class.active]="loginType === 'patient'" 
+      (click)="segmentChanged('patient')">Patient Login</button>
+    <button 
+      [class.active]="loginType === 'doctor'" 
+      (click)="segmentChanged('doctor')">Doctor Login</button>
+  </div>
+
+  <!-- Login Form -->
+  <div class="form-section">
+    <form (ngSubmit)="onLogin()">
+      <div class="input-item">
+        <input
+          type="text"
+          placeholder="Email/Mobile"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="input-item">
+        <input
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+      </div>
+
+      <div class="forgot-password-wrapper">
+        <span class="forgot-link" (click)="onForgotPassword()">Forgot Password?</span>
+      </div>
+
+      <button type="submit" class="login-button">Login</button>
+    </form>
+
+    <div class="signup-wrapper">
+      <span class="medium-text">New here? </span>
+      <span class="signup-link" (click)="onSignUp()">Sign Up</span>
+    </div>
+  </div>
+
+  <!-- Illustration -->
+  <div class="illustration-section">
+    <img src="assets/images/login_img.png" alt="Doctor Illustration" class="doctor-image" />
+  </div>
+</div>
